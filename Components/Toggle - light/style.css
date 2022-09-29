@@ -1,0 +1,119 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* COLORS */
+:root {
+  --lightMode-text-primary: #2e2b26;
+  --lightMode-text-secondary: #848484;
+  --lightMode-elements-gray3: #848484;
+  --lightMode-elements-gray2: #c3c2c1;
+  --lightMode-elements-gray1: #d6d6d6;
+  --lightMode-background-bg2: #e5e5e5;
+  --lightMode-background-bg1: #f0f0f0;
+  --lightMode-background-bg0: #ffffff;
+
+  --darkMode-text-primary: #ffffff;
+  --darkMode-text-secondary: #ababab;
+  --darkMode-elements-gray3: #ababab;
+  --darkMode-elements-gray2: #808080;
+  --darkMode-elements-gray1: #6b6b6b;
+  --darkMode-background-bg2: #575757;
+  --darkMode-background-bg1: #424242;
+  --darkMode-background-bg0: #2e2e2e;
+
+  --display1: 700 80px/84px 'Inter', sans-serif;
+  --display2: 700 72px/76px 'Inter', sans-serif;
+  --display3: 700 54px/60px 'Inter', sans-serif;
+  --headline1: 700 40px/48px 'Inter', sans-serif;
+  --headline2: 700 24px/32px 'Inter', sans-serif;
+  --headline3: 700 20px/28px 'Inter', sans-serif;
+  --headline4: 700 18px/24px 'Inter', sans-serif;
+  --uppercase: 700 16px/24px 'Inter', sans-serif;
+  --body: 400 18px/26px 'Inter', sans-serif;
+  --caption: 400 16px/24px 'Inter', sans-serif;
+  --button: 400 14px/20px 'Inter', sans-serif;
+  --max-width: 1180px;
+}
+
+/* GENERALES */
+* { 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: var(--body);
+  background-color: var(--lightMode-background-bg0);
+  color: var(--lightMode-text-primary);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--lightMode-text-primary);
+}
+
+/* RADIO BUTTON - LIGHT COMPONENT */
+
+/* The container */
+.toggle-container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  color: var(--lightMode-text-primary);
+  font: var(--caption);
+  user-select: none;
+  padding-left: 52px;
+}
+
+/* Hide the browser´s default checkbox */
+.toggle-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0px;
+  height: 0px;
+}
+
+/* Create a custom checkbox border */
+.toggle-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 44px;
+  height: 24px;
+  border: 1px solid var(--lightMode-elements-gray2);
+  border-radius: 20px;
+}
+
+/* Create the checkmark/indicator (left when not checked) */
+.toggle-checkmark:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--lightMode-elements-gray2);
+  top: 50%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-out;
+}
+
+/* When the checkbox is checked, change border color */
+.toggle-container input:checked ~ .toggle-checkmark {
+  border-color: var(--lightMode-elements-gray3);
+}
+
+/* Move checkmark to right when checked */
+.toggle-container input:checked ~ .toggle-checkmark:after {
+  background-color: var(--lightMode-text-primary);
+  left: 72%;
+}
+
+

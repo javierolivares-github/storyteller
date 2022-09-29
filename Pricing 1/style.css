@@ -1,0 +1,163 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* VARIABLES */
+:root {
+  --lightMode-primary-color: #2e2b26;
+  --lightMode-secondary-color: #848484;
+  --lightMode-gray3-color: #848484;
+  --lightMode-gray2-color: #c3c2c1;
+  --lightMode-gray1-color: #d6d6d6;
+  --lightMode-bg2-color: #e5e5e5;
+  --lightMode-bg1-color: #f0f0f0;
+  --lightMode-bg0-color: #ffffff;
+
+  --darkMode-primary-color: #ffffff;
+  --darkMode-secondary-color: #ababab:
+  --darkMode-gray3-color: #ababab;
+  --darkMode-gray2-color: #808080;
+  --darkMode-gray1-color: #6b6b6b;
+  --darkMode-bg2-color: #575757;
+  --darkMode-bg1-color: #424242;
+  --darkMode-bg0-color: #2e2e2e;
+
+  --display1: 700 80px/84px 'Inter', sans-serif;
+  --display2: 700 72px/76px 'Inter', sans-serif;
+  --display3: 700 54px/60px 'Inter', sans-serif;
+  --headline1: 700 40px/48px 'Inter', sans-serif;
+  --headline2: 700 24px/32px 'Inter', sans-serif;
+  --headline3: 700 20px/28px 'Inter', sans-serif;
+  --headline4: 700 18px/24px 'Inter', sans-serif;
+  --uppercase: 700 16px/24px 'Inter', sans-serif;
+  --body: 400 18px/26px 'Inter', sans-serif;
+  --caption: 400 16px/24px 'Inter', sans-serif;
+  --button: 400 14px/20px 'Inter', sans-serif;
+  --max-widht: 1180px;
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* GENERALES */
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: var(--lightMode-primary-color);
+}
+
+/* UTILITIES */
+.pricing {
+  border: 1px solid var(--lightMode-secondary-color);
+}
+
+.wrapper {
+  max-width: var(--max-widht);
+  margin: auto;
+  overflow: hidden;
+}
+
+.container {
+  height: 834px;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font: var(--headline1);
+  letter-spacing: -1.3px;
+  align-self: center;
+  margin-bottom: 2rem;
+}
+
+.copy {
+  font: var(--body);
+  max-width: 560px;
+  text-align: center;
+  align-self: center;
+  margin-bottom: 3rem;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+}
+
+.card {
+  height: 444px;
+  border: 1px solid var(--lightMode-gray2-color);
+  background: var(--lightMode-bg0-color);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-copy {
+  font: var(--button);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--lightMode-secondary-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.card-title {
+  font: var(--headline1);
+  letter-spacing: -1.3px;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.card-copy2 {
+  font: var(--button);
+  color: var(--lightMode-secondary-color);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.card-list {
+  list-style: none;
+  padding-left: 0.5rem;
+}
+
+.card-itemList {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.card-itemList span {
+  font: var(--caption);
+}
+
+.card-button {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font: var(--button);
+  text-decoration: none;
+  color: var(--lightMode-primary-color);
+  border: 1px solid var(--lightMode-gray2-color);
+  background: var(--lightMode-bg0-color);
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.card-button:hover,
+.card-button:active {
+  background: var(--lightMode-primary-color);
+  color: var(--lightMode-bg0-color);
+}

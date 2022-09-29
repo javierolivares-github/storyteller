@@ -1,0 +1,206 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* VARIABLES */
+:root {
+  --lightMode-primary-color: #2e2b26;
+  --lightMode-secondary-color: #848484;
+  --lightMode-gray3-color: #848484;
+  --lightMode-gray2-color: #c3c2c1;
+  --lightMode-gray1-color: #d6d6d6;
+  --lightMode-bg2-color: #e5e5e5;
+  --lightMode-bg1-color: #f0f0f0;
+  --lightMode-bg0-color: #ffffff;
+
+  --darkMode-primary-color: #ffffff;
+  --darkMode-secondary-color: #ababab:
+  --darkMode-gray3-color: #ababab;
+  --darkMode-gray2-color: #808080;
+  --darkMode-gray1-color: #6b6b6b;
+  --darkMode-bg2-color: #575757;
+  --darkMode-bg1-color: #424242;
+  --darkMode-bg0-color: #2e2e2e;
+
+  --display1: 700 80px/84px 'Inter', sans-serif;
+  --display2: 700 72px/76px 'Inter', sans-serif;
+  --display3: 700 54px/60px 'Inter', sans-serif;
+  --headline1: 700 40px/48px 'Inter', sans-serif;
+  --headline2: 700 24px/32px 'Inter', sans-serif;
+  --headline3: 700 20px/28px 'Inter', sans-serif;
+  --headline4: 700 18px/24px 'Inter', sans-serif;
+  --uppercase: 700 16px/24px 'Inter', sans-serif;
+  --body: 400 18px/26px 'Inter', sans-serif;
+  --caption: 400 16px/24px 'Inter', sans-serif;
+  --button: 400 14px/20px 'Inter', sans-serif;
+  --max-widht: 1180px;
+}
+
+
+/* RESET */
+* { 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* GENERALES */
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: var(--lightMode-primary-color);
+}
+
+header {
+  margin-top: 96px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--lightMode-primary-color);
+}
+
+/* UTILITIES */
+.wrapper {
+  max-width: var(--max-widht);
+  margin: auto;
+  overflow: hidden;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  color: var(--lightMode-primary-color);
+  border: 1px solid var(--lightMode-gray2-color);
+  font: var(--button);
+}
+
+.btn:hover {
+  background: var(--lightMode-gray3-color);
+  color: var(--lightMode-bg0-color);
+}
+
+.bg-0 {
+  background: var(--lightMode-bg0-color);
+}
+
+.bg-1 {
+  background: var(--lightMode-bg1-color);
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: var(--lightMode-bg0-color);
+  box-shadow: 0 3px 8px 0 var(--lightMode-gray2-color);
+  border: 1px solid var(--lightMode-secondary-color);
+}
+
+.navbar-gridContainer {
+  height: 80px;
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr 4fr;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font: var(--headline3);
+  letter-spacing: -2%;
+}
+
+.menu {
+  font: var(--caption);
+  letter-spacing: 0%;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.menu-item a {
+  display: inline-block;
+  padding: 0 18px;
+}
+
+.menu-item a:hover {
+  text-decoration: underline;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-signIn {
+  padding: 10px 60px;
+  color: var(--lightMode-primary-color);
+  background-color: var(--lightMode-bg1-color);
+  border: 1px solid var(--lightMode-gray2-color);
+  font: var(--button);
+}
+
+.btn-signInForFree {
+  padding: 10px 22px;
+  color: var(--lightMode-primary-color);
+  background-color: var(--lightMode-bg0-color);
+  border: 1px solid var(--lightMode-gray2-color);
+  font: var(--button);
+}
+
+/* SHOWCASE */
+.showcase {
+  background: var(--lightMode-bg1-color);
+  position: relative;
+  border: 1px solid var(--lightMode-secondary-color);
+}
+
+.showcase:before {
+  content: '';
+  background: url('./assets/pattern.jpg') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+
+.showcase-grid {
+  height: 75vh;
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  align-items: center;
+  justify-content:  center;
+}
+
+.showcase-content {
+  z-index: 1;
+}
+
+.showcase-title {
+  font: var(--display2);
+  letter-spacing: -2px;
+  margin-bottom: 2.25rem;
+}
+
+.showcase-copy {
+  font: var(--body);
+  margin-bottom: 2.25rem;
+}
+
+
+
+
+
+
+
+
+
+

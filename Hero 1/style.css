@@ -1,0 +1,145 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* VARIABLES */
+:root {
+  --primary-color: #2e2b26;
+  --secondary-color: #848484;
+  --gray-3-color: #848484;
+  --gray-2-color: #c3c2c1;
+  --gray-1-color: #d6d6d6;
+  --bg-2-color: #e5e5e5;
+  --bg-1-color: #f0f0f0;
+  --bg-0-color: #ffffff;
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* MAIN */
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--primary-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+/* TYPOGRAPHY */
+.display2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 76px;
+  letter-spacing: -2%;
+}
+
+.headline3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -1.4%;
+}
+
+.bodyText {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -1.4%;
+}
+
+.caption {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+}
+
+.buttonText{
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+}
+
+/* UTILITY CLASSES */
+.container {
+  max-width: 1180px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* NAV */
+nav {
+  background-color: var(--bg-0-color);
+  box-shadow: 0 2px 8px 0 var(--gray-1-color);
+}
+
+.navbar-content {
+  color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.navbar-content ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-content ul li {
+  margin-left: 32px;
+}
+
+.navbar-content ul li a.current,
+.navbar-content ul li a:hover {
+  text-decoration: underline;
+}
+
+/* SHOWCASE */
+.showcase-container {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+
+
+
+.showcase-content h1 {
+  margin-bottom: 2.25rem;
+}
+
+.showcase-content p {
+  margin-bottom: 2.25rem;
+}
+.showcase-content .btn {
+  display: inline-block;
+  border: 1px solid var(--gray-2-color);
+  padding: 10px 60px;
+}
+
+.showcase-content .btn.btn-1 {
+  background-color: var(--bg-1-color);
+}
+
+.showcase-img img {
+  width: 100%;
+}
+
+
+
+
